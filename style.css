@@ -1,0 +1,677 @@
+/* =====================================================
+   CITIZENSHIP WITHOUT POWER
+   PHASE 2 - STYLING
+
+   THEME:
+   Documentary / Museum Exhibit
+
+   COLORS:
+   Background: Near Black
+   Text: Off White
+   Accent Red: Puerto Rican Flag Inspired
+
+===================================================== */
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background-color: #0f0f10;
+
+    color: #f5f5f5;
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   GLOBAL TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 1.1rem;
+    max-width: 900px;
+}
+
+blockquote {
+
+    font-size: 1.4rem;
+
+    border-left: 4px solid #d62828;
+
+    padding-left: 1rem;
+
+    margin: 2rem 0;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+#progress-bar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+
+    height: 5px;
+
+    background: #d62828;
+
+    z-index: 9999;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    background: rgba(0,0,0,0.75);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 1000;
+}
+
+.logo {
+
+    font-weight: bold;
+
+    color: white;
+}
+
+.navbar ul {
+
+    display: flex;
+
+    gap: 1.5rem;
+
+    list-style: none;
+}
+
+.navbar a {
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+
+    color: #d62828;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+
+    min-height: 100vh;
+
+    padding: 8rem 0;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    text-align: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* REPLACE LATER WITH VIDEO */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("images/flag.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    filter: brightness(0.35);
+
+    z-index: 0;
+}
+
+.hero-overlay {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+}
+
+.eyebrow {
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    color: #cccccc;
+
+    margin-bottom: 1rem;
+}
+
+.scroll-indicator {
+
+    margin-top: 3rem;
+
+    font-size: 1.2rem;
+
+    opacity: .8;
+}
+
+
+/* =========================
+   PLACEHOLDER BOXES
+========================= */
+
+.placeholder-box {
+
+
+    min-height: 250px;
+
+    
+
+    height: 300px;
+
+    overflow: hidden;
+
+    border: 2px dashed rgba(255,255,255,.3);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 1rem;
+
+    background: rgba(255,255,255,.03);
+}
+
+
+/* =========================
+   IMAGE GRID
+========================= */
+
+.image-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+
+/* =========================
+   CONTRADICTION SECTION
+========================= */
+
+.split-layout {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 4rem;
+
+    margin-top: 3rem;
+}
+
+.left-side,
+.right-side {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.left-side h3 {
+
+    color: #4da3ff;
+}
+
+.right-side h3 {
+
+    color: #d62828;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+
+    position: relative;
+
+    margin-top: 4rem;
+}
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+
+    top: 0;
+
+    width: 3px;
+
+    height: 100%;
+
+    background: #d62828;
+}
+
+.timeline-item {
+
+    margin-bottom: 3rem;
+
+    padding-left: 80px;
+
+    position: relative;
+}
+
+.timeline-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 10px;
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #d62828;
+}
+
+
+/* =========================
+   EVIDENCE SECTION
+========================= */
+
+.graph-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+.graph-placeholder {
+
+    min-height: 250px;
+
+    border: 2px dashed rgba(255,255,255,.3);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   HUMAN COST
+========================= */
+
+.story-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+.large-photo {
+
+    min-height: 400px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 2px dashed rgba(255,255,255,.2);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================
+   IDENTITY
+========================= */
+
+.identity-layout {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    margin: 3rem 0;
+}
+
+
+/* =========================
+   CULTURE
+========================= */
+
+.culture-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 3rem;
+}
+
+
+/* =========================
+   CONCLUSION
+========================= */
+
+.conclusion {
+
+    text-align: center;
+}
+
+.big-statement {
+
+    font-size: clamp(1.8rem,4vw,3rem);
+
+    font-weight: bold;
+
+    margin: 3rem auto;
+}
+
+.final-question {
+
+    font-size: 2rem;
+
+    border: none;
+}
+
+.sources-section {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 4rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 3rem;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: all .8s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar ul {
+        display: none;
+    }
+
+    .split-layout,
+    .graph-grid,
+    .story-grid,
+    .identity-layout,
+    .culture-grid,
+    .sources-section,
+    .image-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+
+        padding: 6rem 0;
+    }
+
+    h1 {
+
+        font-size: 3rem;
+    }
+}
+
+.timeline-item {
+
+    opacity: 1;
+
+    transition: all .8s ease;
+}
+
+.section-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recta {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.song-name {
+    margin-left: 400;  
+}
+
+#intro-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #0f0f10;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 99999;
+}
+
+.intro-content {
+
+    max-width: 700px;
+
+    padding: 2rem;
+}
+
+#intro-screen h1 {
+
+    margin-bottom: 1rem;
+}
+
+#intro-screen p {
+
+    margin-bottom: 2rem;
+}
+
+#enter-site {
+
+    padding: 15px 30px;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    border: none;
+
+    background: #d62828;
+
+    color: white;
+
+    border-radius: 8px;
+}
+
+.bajo {
+    align-self: center;
+}
